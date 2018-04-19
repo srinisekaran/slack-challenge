@@ -1,7 +1,7 @@
 
 '''
 
-Slack - Frontend QA Interview Tasks
+Slack - Automation Interview Tasks
 Task 1
 
 Srinivaas Sekaran
@@ -65,7 +65,7 @@ def send_message(message):
 		# Wait until slackbot page is loaded
 		element = wait.until(EC.text_to_be_present_in_element((By.ID, 'channel_name'), slack_recepient_username))
 	except:
-		raise Exception('Cannot find element!')
+		logging.exception('Cannot find element!')
 
 	msg_box = driver.find_element_by_id('msg_input')
 	actions = webdriver.ActionChains(driver)
